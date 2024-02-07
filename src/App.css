@@ -1,5 +1,6 @@
+/* Common styles for all screen sizes */
 .App {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -7,9 +8,10 @@
   color: white;
 }
 
-.menu, .quiz,.score{
-  width: 1750px;
-  height: 750px;
+.menu, .quiz, .score {
+  width: 100%; /* Use 100% width to adapt to different screen sizes */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  height: auto; /* Allow height to adjust based on content */
   background-color: orange;
   border-radius: 10px;
   display: flex;
@@ -18,33 +20,35 @@
   align-items: center;
 }
 
-.menu button,.quiz button,.score button{
-  width: 300px;
+.menu button, .quiz button, .score button {
+  width: 100%; /* Make buttons take full width */
   height: 50px;
   margin: 5px;
-  border:none;
+  border: none;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
-  
 }
 
-button:active{
+/* Active state for buttons */
+button:active {
   background: orange;
-  color:#fff;
+  color: #fff;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin; /* Adjust the logo size based on the viewport */
   pointer-events: none;
 }
 
+/* Animation for logo spin */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styles for all screen sizes */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -56,15 +60,24 @@ button:active{
   color: white;
 }
 
+/* Link styles */
 .App-link {
   color: #61dafb;
 }
 
+/* Logo spin animation keyframes */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 768px) {
+  .menu, .quiz, .score {
+    max-width: 800px; /* Adjust the maximum width for larger screens */
   }
 }
