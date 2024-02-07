@@ -69,9 +69,4 @@ button:active{
   }
 }
 
-/* Media query for larger screens */
-@media only screen and (min-width: 768px) {
-  .menu, .quiz, .score {
-    max-width: 800px; /* Adjust the maximum width for larger screens */
-  }
-}
+
